@@ -1,0 +1,214 @@
+﻿
+@{
+    ViewBag.Title = "_MainLayout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Bai tap lon">
+    <meta name="author" content="https://www.facebook.com/pham.t.thien1">
+
+    <title>Web Cây Cảnh</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="~/Asset/css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/Asset/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="fonts/font-slider.css" type="text/css">
+
+    <!-- jQuery and Modernizr-->
+    <script src="~/Asset/js/jquery-2.1.1.js"></script>
+
+    <!-- Core JavaScript Files -->
+    <script src="~/Asset/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!--Top-->
+    <nav id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <select class="language">
+                        <option value="Vietnamese" selected>Tiếng Việt</option>
+                        <option value="France">Tiếng Pháp</option>
+                        <option value="English">Tiếng Anh</option>
+                    </select>
+                    <select class="currency">
+                        <option value="USD" selected>USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="DĐ">Đồng</option>
+                    </select>
+                </div>
+                <div class="col-xs-6">
+                    <ul class="top-link">
+                        <li><a href="@Url.Action("Register","Account")"><span class="glyphicon glyphicon-user"></span> Tài khoản</a></li>
+                        <li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Header-->
+    <header class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div id="logo"><img src="~/Asset/images/logo1.png" /></div>
+
+            </div>
+            <div class="col-md-4">
+                <form class="form-search">
+                    <input type="text" class="input-medium search-query">
+                    <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <div id="cart"><a class="btn btn-1" href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>Tổng : 0 cây</a></div>
+            </div>
+        </div>
+    </header>
+    <!--Navigation-->
+    <nav id="menu" class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <span id="heading" class="visible-xs">Loại cây</span>
+                <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+                    <li class="dropdown">
+                        @Html.ActionLink("Cây trong phòng", "Index", "Shop")
+                        <div class="dropdown-menu">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    <li><a href="category.html">Cây cảnh để bàn</a></li>
+                                    <li><a href="category.html">Cây cảnh thủy sinh</a></li>
+                                    <li><a href="category.html">Cây cảnh trong phòng</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hoa &amp; Bonsai</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    <li><a href="category.html">Hoa bốn mùa</a></li>
+                                    <li><a href="category.html">Cây lá màu đẹp</a></li>
+                                    <li><a href="category.html">Cây dược liệu</a></li>
+                                    <li><a href="category.html">Cây rợp bóng</a></li>
+                                    <li><a href="category.html">Cây gỗ</a></li>
+                                    <li><a href="category.html">Cây leo</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Xương rồng cảnh &amp; Sen đá</a>
+                        <div class="dropdown-menu" style="margin-left: -203.625px;">
+                            <div class="dropdown-inner">
+                                <ul class="list-unstyled">
+                                    <li><a href="category.html">Xương rồng</a></li>
+                                    <li><a href="category.html">Tiểu cảnh xương rồng</a></li>
+
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li><a href="category.html">Tiểu cảnh sen đá</a></li>
+                                    <li><a href="category.html">Sen đá</a></li>
+
+                                </ul>
+                                <ul class="list-unstyled">
+                                    <li><a href="category.html">Tiểu cảnh</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="category.html">Cây phong thủy</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--//////////////////////////////////////////////////-->
+    <!--///////////////////HomePage///////////////////////-->
+    <!--//////////////////////////////////////////////////-->
+    @RenderBody()
+    <footer>
+        <div class="container">
+            <div class="wrap-footer">
+                <div class="row">
+                    <div class="col-md-3 col-footer footer-1">
+                        <img src="~/Asset/images/logo1.png" />
+                        <p>Web cây cảnh thể hiện niềm đam mê chung của những nhà vườn nhiều năm trong ngành, những người yêu cây cảnh, những doanh nghiệp trẻ trong và ngoài nước, cùng sát cánh vươn đến một vị thế mới cho cây cảnh Việt Nam.</p>
+                    </div>
+                    <div class="col-md-3 col-footer footer-2">
+                        <div class="heading"><h4>Customer Service</h4></div>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Delivery Information</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-footer footer-3">
+                        <div class="heading"><h4>My Account</h4></div>
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Brands</a></li>
+                            <li><a href="#">Gift Vouchers</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-footer footer-4">
+                        <div class="heading"><h4>Chi tiết xin liên hệ</h4></div>
+                        <ul>
+                            <li><span class="glyphicon glyphicon-home"></span>Mã Số Thuế: 0801244382</li>
+                            <li><span class="glyphicon glyphicon-earphone"></span>01675044250 Văn Phòng: Số 3, phố Hoàng Lộc, Khu 17, Phường Lê Thanh Nghị, Tp Hải Dương</li>
+                            <li><span class="glyphicon glyphicon-envelope"></span>Mail: webcaycanhhot@gmail.com </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        Your Store ?? 20xx - Designed by <a href="https://www.facebook.com/pham.t.thien1">Thiện</a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pull-right">
+                            <ul>
+                                <li><img src="~/Asset/images/visa-curved-32px.png" /></li>
+                                <li><img src="~/Asset/images/paypal-curved-32px.png" /></li>
+                                <li><img src="~/Asset/images/discover-curved-32px.png" /></li>
+                                <li><img src="~/Asset/images/maestro-curved-32px.png" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
